@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phonePattern = /^[6789][0-9]{9}$/;
   const namePattern = /^[A-Za-z]+$/;
-  const statePattern = /^[A-Za-z\s]+$/;
-  const addressPattern = /^(?=.*[A-Za-z])[A-Za-z0-9\s,./-]+$/
-;
+  // const statePattern = /^[A-Za-z\s]+$/;
+  const addressPattern = /^(?=.*[A-Za-z])[A-Za-z0-9\s,./-]+$/ ;
+
 
   // Email live validation
   emailInput.addEventListener("input", function () {
@@ -70,11 +70,11 @@ lastName.addEventListener("input", function () {
 });
 
 // State live validation
-state.addEventListener("input", function () {
-    if (statePattern.test(state.value)) {
-        state.style.border = "2px solid green";
+state.addEventListener("select", function () {
+    if (state === "") {
+      state.style.border = "2px solid red";
     } else {
-        state.style.border = "2px solid red";
+      state.style.border = "2px solid green";
     }
 });
 
@@ -150,7 +150,7 @@ address.addEventListener("input", function () {
 
     // State check
 
-    if (!statePattern.test(state.value)) {
+    if (!state === "") {
         state.style.border = "2px solid red";
         stateError.style.display = "block";
         isValid = false;

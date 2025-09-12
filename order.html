@@ -51,7 +51,7 @@
             <div class="order-container">
                 <div class="checkout">
                     <h1>CHECKOUT</h1>
-              
+
                     <div class="contact">
                         <h2>CONTACT INFO</h2>
                         <input type="text" id="email" placeholder="Email">
@@ -68,47 +68,60 @@
                         <h2>SHIPPING ADDRESS</h2>
 
                         <div class="name">
+                            <div class="flast">
+                                <input type="text" id="firstName" placeholder="First Name" class="input-field">
+                                <span id="firstNameError" style="color:red; display:none;">
+                                    Only letters allowed
+                                </span>
+                            </div>
 
-                            <input type="text" id="firstName" placeholder="First Name" class="input-field">
-                            <span id="firstNameError" style="color:red; display:none;">
-                                First name must contain only letters
-                            </span>
+                            <div class="flast">
+                                <input type="text" id="lastName" placeholder="Last Name" class="input-field">
+                                <span id="lastNameError" style="color:red; display:none;">
+                                    Only letters allowed
+                                </span>
+                            </div>
 
-                            <input type="text" id="lastName" placeholder="Last Name" class="input-field">
-                            <span id="lastNameError" style="color:red; display:none;">
-                                Last name must contain only letters
-                            </span>
-                            
                         </div>
-                        
-                        
-                        <select id="state" onchange="populateDistricts()">
+
+
+                        <select id="state" class="form-control">
                             <option value="">Select State</option>
                             <option value="Tamil Nadu">Tamil Nadu</option>
                             <option value="Kerala">Kerala</option>
                             <option value="Karnataka">Karnataka</option>
                             <option value="Andhra Pradesh">Andhra Pradesh</option>
-                           
                         </select>
-                         <span id="stateError" style="color:red; display:none;">
-                                Please select a state
-                            </span>
+                        <span id="stateError" style="color:red; display:none;">
+                            Please select a state
+                        </span>
 
                         <input type="text" id="address" placeholder="Address" class="input-field">
                         <span id="addressError" style="color:red; display:none;">
                             Address can include letters, numbers, spaces, , . -
                         </span>
-                        
+
                         <div class="btn">
                             <a href="#"><button id="orderBtn">Order Now</button></a>
                         </div>
+                        <!-- Popup -->
                         <div id="orderPopup" class="popup">
                             <div class="popup-content">
+                                <!-- Close Button (top-right corner) -->
+                                <button class="close-btn" id="closePopup">✖</button>
+
                                 <h2>✅ Order Successfully Placed!</h2>
                                 <p>Thank you for shopping with us 😊</p>
-                                <button id="closePopup">Close</button>
+
+                                <!-- Buttons -->
+                                <div class="popup-actions">
+                                    <button class="thank-btn" disabled>Thank You for Order</button>
+                                    <button class="shop-btn" onclick="window.location.href='shop.html'">Shop
+                                        Again</button>
+                                </div>
                             </div>
                         </div>
+
                         <div class="form-row">
 
                             <div class="form-group">
@@ -174,8 +187,8 @@
                             <h3><i class="bi bi-currency-rupee"></i>3000</h3>
                         </div>
                         <div class="ttl-one">
-                            <h3>Shipping</h3>
-                            <h3 class="next">Calculated at next step</h3>
+                            <h3>Shipping(Free)</h3>
+                            <h3 class="next"><i class="bi bi-currency-rupee"></i>0 + <i class="bi bi-currency-rupee"></i>3000</h3>
                         </div>
                         <hr>
                     </div>
@@ -203,12 +216,20 @@
                 <div class="menu">
                     <h1>Quicklinks</h1>
                     <ul>
-                        <li><a href="./index.html"><p>Home</p></a></li>
-                        <li><a href="./shop.html"><p>Shop</p></a></li>
-                        <li><a href="./cart.html">
-                                <div class="active"><p>Cart</p></div>
+                        <li><a href="./index.html">
+                                <p>Home</p>
                             </a></li>
-                        <li><a href="./order.html"><p>Order</p></a></li>
+                        <li><a href="./shop.html">
+                                <p>Shop</p>
+                            </a></li>
+                        <li><a href="./cart.html">
+                                <div class="active">
+                                    <p>Cart</p>
+                                </div>
+                            </a></li>
+                        <li><a href="./order.html">
+                                <p>Order</p>
+                            </a></li>
                     </ul>
                 </div>
                 <div class="links">
@@ -265,9 +286,17 @@
                 <a href="#">
                     <p>© 2025 Xportz. All rights reserved.</p>
                 </a>
-                <a href="#">
-                    <p>Terms & conditions | Privacy policy</p>
-                </a>
+                <div class="con">
+                    <a href="#">
+                        <p>Terms & conditions </p>
+
+                    </a>
+                    <p>|</p>
+                    <a href="#">
+                        <p> Privacy policy</p>
+                    </a>
+
+                </div>
             </div>
         </div>
 

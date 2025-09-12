@@ -86,7 +86,7 @@ header {
 
 .nav-links li a.active,
 .nav-links li a:hover {
-  color: #ff9800;
+  color: #FF6B00;
 }
 
 .icons {
@@ -111,8 +111,6 @@ header {
 #check {
   display: none;
 }
-
-
 
 #searchBox {
   width: 100%;
@@ -186,7 +184,8 @@ footer .contain .content .links .text {
     height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 15px;
+    /* justify-content: space-around; */
 }
 footer .contain .content .links .text a{
     text-decoration: none;
@@ -214,7 +213,8 @@ footer .contain .content .shop-cat  .textt {
     height: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 15px;
+    /* justify-content: space-around; */
 }
 
 footer .contain .content .shop-cat  .textt a{
@@ -263,6 +263,10 @@ footer .contain .privacy a p{
     color: white;
 
 }
+footer .contain .privacy .con{
+    display: flex;
+    gap: 5px;
+}
 footer .contain .privacy  a{
     font-size: 20px;
     text-decoration: none;
@@ -292,7 +296,7 @@ footer .contain .content .menu ul li a{
     text-decoration: none;
     list-style: none;
     color: white;
-    font-size: var(--fs-20);
+    font-size: var(--fs-18);
 }
 /* footer end */
 
@@ -644,6 +648,11 @@ header nav .icon {
 header .navbar .logo img{
     width: 100%;
     height: 100%;
+}
+}
+@media only screen and (max-width:419px) {
+footer .contain .content .follow {
+    width: 50%;
 }
 }
 @media only screen and (max-width:384px) {
