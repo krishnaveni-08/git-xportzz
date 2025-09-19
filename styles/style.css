@@ -347,7 +347,13 @@ header .navbar .top-row .navs a h2{
 }
 
 @media only screen and (max-width:927px) {
-    footer {
+
+
+
+}
+
+@media only screen and (max-width:927px) {
+        footer {
         height: 100vh;
     }
 
@@ -363,14 +369,7 @@ header .navbar .top-row .navs a h2{
     footer .contain .content .shop-cat {
         width: 30%;
     }
-
-
-}
-
-@media only screen and (max-width:927px) {
-    footer{
-        height: 130vh;
-    }
+ 
     footer .contain .content .links h1 {
         font-size: var(--fs-26);
     }
@@ -384,6 +383,10 @@ header .navbar .top-row .navs a h2{
 
     }
 
+    footer .contain .content .follow {
+        height: 40%;
+        justify-content: center;
+    }
     footer .contain .content .follow h1 {
         font-size: var(--fs-26);
 
@@ -482,6 +485,13 @@ footer .contain .privacy {
   }
 
 }
+@media only screen and (max-width:724px) {
+footer .contain .content .follow {
+    width: 30%;
+}
+
+
+}
 @media only screen and (max-width:660px) {
     footer {
         height: 130vh;
@@ -515,6 +525,7 @@ footer .contain .privacy {
         width: 30%;
         height: 60%;
         /* background-color: #FF6B00; */
+        justify-content: start;
     }
 footer .contain .content .menu{
     width: 40%;

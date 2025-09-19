@@ -15,7 +15,15 @@
     --fw-regular: 400;
 }
 
-#order {
+:root {
+  --primary: #007bff;
+  --dark: #333;
+  --light: #f9f9f9;
+  --error: #dc3545;
+}
+
+/* Container */
+                #order {
     width: 100%;
     height: 120vh;
     display: flex;
@@ -29,251 +37,174 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-
-#order .order-container .checkout {
-    width: 40%;
-    height: 100%;
-}
-
-#order .order-container .checkout h1 {
-    width: 95%;
-    text-align: start;
-    font-size: 32px;
-}
-
-#order .order-container .checkout .hd {
-    width: 88%;
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-#order .order-container .checkout .hd h2 {
-    font-size: 24px;
-}
-
-#order .order-container .checkout .contact {
-    width: 95%;
-    height: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     gap: 10px;
 }
 
-#order .order-container .checkout .contact h2 {
-    font-size: 20px;
-}
-
-#order .order-container .checkout .contact input {
-    width: 90%;
-    height: 40px;
-    
-}
-
-#order .order-container .checkout .contact input::placeholder {
-    font-size: 16px;
-    padding-left: 10px;
-}
-
-#order .order-container .checkout .shoping {
-    width: 95%;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-#order .order-container .checkout .shoping h2 {
-    font-size: 20px;
-    height: 10%;
-    display: flex;
-    align-items: center;
-}
-#order .order-container .checkout .shoping .name {
-
-    display: flex;
-    width: 90%;
-    /* background-color: #28a745; */
-    height: 40px;
-    
-}
-#order .order-container .checkout .shoping .name  #firstName{   
-    width: 90%;
-    height: 40px;
-    font-size: 16px;
-    padding-left: 10px;
-
-}
-#order .order-container .checkout .shoping .name  #lastName{   
-    width: 100%;
-    height: 40px;
+.checkout{
+    width: 50%;
     /* background-color: #007bff; */
-    font-size: 16px;
-    padding-left: 10px;
-
 }
-#order .order-container .checkout .shoping .name .flast{
-    /* display: flex; */
-    width: 90%;
-    /* background-color: aqua; */
-}
-
-
-.input-error {
-    border: 2px solid red;
-}
-.input-error {
-    border: 2px solid red;
-}
- #order .order-container .checkout .contact input{
-  padding-left: 10px; 
+/* Headings */
+.checkout h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-#order .order-container .checkout .shoping .name input{
-    width: 45%;
-    height: 40px;
-}
-#order .order-container .checkout .shoping #state {
-    width: 90%;
-    height: 40px;
-}
-#order .order-container .checkout .shoping select{
-font-size: var(--fs-22);
-color: #5e5e5e;
-
-}
-#order .order-container .checkout .shoping select option{
-    padding-left: 10px;
-}
-#order .order-container .checkout .shoping input::placeholder {
-    font-size: 16px;
-    padding-left: 10px;
+.checkout h2 {
+  font-size: 20px;
+  margin: 20px 0 10px;
+  color: var(--dark);
 }
 
-#order .order-container .checkout .shoping .hd-two {
-    /* height: 20%; */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* Inputs */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
- #order .order-container .checkout .shoping .btn {
-    width: 92%;
-    display: flex;
-    justify-content: end;
-}
-input.error, select.error {
-    border: 2px solid red;
-}
-
-#order .order-container .checkout .shoping #address{
-    width: 90%;
-    height: 100px;
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,123,255,0.4);
 }
 
-#order .order-container .checkout .shoping .btn a button {
-    width: 230px;
-    height: 50px;
-    background-color: black;
-    color: white;
+/* Name row */
+.name {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.name .flast {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Error message */
+span[style*="color:red"] {
+  font-size: 14px;
+  display: none;
+}
+
+/* Button */
+.btn {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.btn button {
+    background: var(--dark);
+    color: #fff;
+    padding: 12px 20px;
     font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-decoration: none;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-#order .order-container .checkout .shoping .btn button i {
-    font-size: 24px;
-}
-
-
-/* Popup background overlay */
-.popup {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Popup box */
-.popup-content {
-    background: #fff;
-    padding: 25px 35px;
-    border-radius: 12px;
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-    animation: scaleUp 0.3s ease-in-out;
-}
-
-/* Popup text styles */
-/* Popup close button (top-right) */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    background: transparent;
     border: none;
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-.close-btn:hover {
-    color: red;
-}
-
-/* Popup actions buttons */
-.popup-actions {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-/* Thank you button (disabled style) */
-.thank-btn {
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: not-allowed;
-}
-
-/* Shop Again button */
-.shop-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s;
+    background-color: #007bff;
+    display: flex;
+    align-items: start;
+    justify-content: start;
 }
-.shop-btn:hover {
-    background-color: #0056b3;
+.btn a{
+    text-decoration: none;
+
 }
 
-/* Fix popup-content for close button */
+.btn button:hover {
+  background: #000;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
 .popup-content {
-    position: relative;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  animation: popupScale 0.3s ease;
+}
+
+@keyframes popupScale {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thank-btn {
+  background: black;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.shop-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.shop-btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .order-container {
+    padding: 15px;
+  }
+  .checkout h1 {
+    font-size: 22px;
+  }
+  .checkout h2 {
+    font-size: 18px;
+  }
 }
 
 
@@ -363,9 +294,6 @@ input.error, select.error {
     justify-content: space-between;
 }
 
-
-
-
 #order .order-container .total .change .align .align-two {
     width: 90%;
 }
@@ -445,7 +373,7 @@ input.error, select.error {
 }
 
 @media only screen and (max-width:1221px) {
-    #order {
+    /* #order {
         height: 160vh;
     }
 
@@ -473,7 +401,9 @@ input.error, select.error {
     #order .order-container .checkout .shoping input {
         width: 400px;
         height: 40px;
-    }
+    } */
+
+
 
 }
 
@@ -525,11 +455,17 @@ input.error, select.error {
     #order .order-container .checkout .shoping h2 {
         font-size: var(--fs-22);
     }
+    #order .order-container .total .subtotal{
+        margin-top: 25px;
+    }
+#order .order-container .total .subtotal hr {
+    margin-top: 20px;
+}
 }
 
 @media only screen and (max-width:1026px) {
     #order {
-        height: 250vh;
+        height: 200vh;
         margin-top: 20px;
     }
 
@@ -553,11 +489,11 @@ input.error, select.error {
 
     #order .order-container .checkout {
         width: 90%;
-        height: 80%;
+        height: 50%;
     }
 
     #order .order-container .checkout .contact {
-        width: 80%;
+        width: 84%;
     }
 
     #order .order-container .checkout .contact input {
@@ -565,15 +501,15 @@ input.error, select.error {
 
     }
 
-    #order .order-container .checkout .shoping .name {
+     #order .order-container .checkout .shoping .name {
         gap: 10px;
-        width: 90%;
+        width: 67%;
     }
 
     #order .order-container .checkout .shoping .name input {
-        width: 74%;
+        width: 100%;
         height: 40px;
-    }
+    } 
 
     #order .order-container .checkout .shoping input {
         width: 66%;
@@ -619,8 +555,11 @@ input.error, select.error {
     width: 100%;
     height: 100%;
  }
+ #order .order-container .checkout .shoping .name {
+    width: 100%;
+ }
 #order .order-container .checkout .shoping .name input { 
-    width: 100%;  
+    width: 80%;  
 }
 #order .order-container .checkout .shoping #state {
     width: 90%;  
@@ -678,13 +617,14 @@ input.error, select.error {
 }
 @media only screen and (max-width:428px) {
     #order{
-        height: 300vh;
+        height: 280vh;
     }
     #order .order-container {
         height: 100%;
     }
     #order .order-container .total{
         height: 70%;
+        /* background-color: #007bff; */
         
     }
     #order .order-container .total .change {
@@ -693,7 +633,8 @@ input.error, select.error {
         flex-direction: column;
     }
     #order .order-container .checkout{
-        height: 50%;
+        height: 60%;
+        /* background-color: #007bff; */
     }
     #order .order-container .total .change .align {
         height: 30%;
@@ -759,6 +700,17 @@ input.error, select.error {
     font-size: var(--fs-16);
  }
 }
+@media only screen and (max-width:394px) {
+     #order .order-container .checkout .shoping .name {
+    width: 100%;
+ }
+#order .order-container .checkout .shoping .name input { 
+    width: 90%;  
+}
+#order {
+    height: 290vh;
+}
+}
 @media only screen and (max-width:374px) {
 #order .order-container .total .subtotal .ttl-one h3{
     font-size: var(--fs-16);
@@ -769,19 +721,29 @@ input.error, select.error {
 
 }
 @media only screen and (max-width:364px) {
+    #order{
+        height: 280vh;
+    }
     #order .order-container .total .change .align .align-one h2{
-font-size: var(--fs-16);
+        font-size: var(--fs-16);
     }
     #order .order-container .total .change .align .align-two h2{
-font-size: var(--fs-16);
+        font-size: var(--fs-16);
     }
     #order .order-container .total .change .align {
         width: 90%;
     }
-#order .order-container .total .change .align .align-three {
-    width: 100%;
+    #order .order-container .total .change .align .align-three {
+        width: 100%;
+    }
+    #order .order-container .total .head h2{
+        font-size: var(--fs-22);
+    }
 }
-#order .order-container .total .head h2{
-    font-size: var(--fs-22);
+@media only screen and (max-width:357px) {
+    #order{
+    height: 270vh;
+    /* background-color: #dc3545;/ */
 }
+
 }

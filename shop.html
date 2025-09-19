@@ -46,7 +46,7 @@
   <!-- Navigation Tabs -->
   <!-- Tabs -->
   <div class="tabs">
-    <div class="tabs-header">
+    <div id="tabs-header">
       <span class="tabs-title">Categories</span>
       <i class="bi bi-chevron-down" id="dropd"></i>
     </div>
@@ -580,7 +580,7 @@
           </ul>
         </div>
         <div class="links">
-          <h1>Customer Support</h1>
+          <h2>Customer Support</h2>
           <div class="text">
             <a href="#">
               <p>Contact Us</p>
@@ -597,7 +597,7 @@
           </div>
         </div>
         <div class="shop-cat">
-          <h1>Shop Categories</h1>
+          <h2>Categories</h2>
           <div class="textt">
             <a href="#">
               <p>Cricket</p>
@@ -620,7 +620,7 @@
           </div>
         </div>
         <div class="follow">
-          <h1>Follow Us</h1>
+          <h2>Follow Us</h2>
           <div class="ic">
             <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a>
             <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -790,7 +790,7 @@
       position: relative;
     }
 
-    .tabs-header {
+    #tabs-header {
       width: 100%;
       display: flex;
       justify-content: center;
@@ -802,7 +802,7 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .tabs-header .tabs-menu {
+    #tabs-header .tabs-menu {
       width: 50%;
       background-color: blue;
     }
@@ -883,11 +883,10 @@
 
 
   // Dropdown toggle
-  document.getElementById("dropd").addEventListener("click", function () {
+  document.getElementById("tabs-header").addEventListener("click", function () {
     document.querySelector(".tabs").classList.toggle("open");
   });
 
-  // Tab switching active state + auto close menu
   const tabBtns = document.querySelectorAll(".tab-btn");
   const tabs = document.querySelector(".tabs");
 

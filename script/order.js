@@ -3,26 +3,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const phoneInput = document.getElementById("phone");
   const firstName = document.getElementById("firstName");
   const lastName = document.getElementById("lastName");
-  const state = document.getElementById("state");
+    const stateSelect = document.getElementById("state");
+
   const address = document.getElementById("address");
 
   const firstNameError = document.getElementById("firstNameError");
   const lastNameError = document.getElementById("lastNameError");
   const emailError = document.getElementById("emailError");
   const phoneError = document.getElementById("phoneError");
+    const stateError = document.getElementById("stateError");
+
   const addressError = document.getElementById("addressError");
-  const stateError = document.getElementById("stateError");
 
   const orderBtn = document.getElementById("orderBtn");
   const orderPopup = document.getElementById("orderPopup");
   const closePopup = document.getElementById("closePopup");
 
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern =
+    /^[A-Za-z][A-Za-z0-9._%+-]*@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
   const phonePattern = /^[6789][0-9]{9}$/;
   const namePattern = /^[A-Za-z]+$/;
   // const statePattern = /^[A-Za-z\s]+$/;
-  const addressPattern = /^(?=.*[A-Za-z])[A-Za-z0-9\s,./-]+$/ ;
-
+  const addressPattern = /^(?=.*[A-Za-z])[A-Za-z0-9\s,./-]{30,}$/;
 
   // Email live validation
   emailInput.addEventListener("input", function () {
@@ -41,63 +43,54 @@ document.addEventListener("DOMContentLoaded", function () {
       phoneInput.style.border = "2px solid green";
       phoneError.style.display = "none";
     } else {
-        phoneInput.style.border = "2px solid red";
-        phoneError.style.display = "block";
+      phoneInput.style.border = "2px solid red";
+      phoneError.style.display = "block";
     }
-});
+  });
 
-// First Name live validation
-firstName.addEventListener("input", function () {
+  // First Name live validation
+  firstName.addEventListener("input", function () {
     if (namePattern.test(firstName.value)) {
-        firstName.style.border = "2px solid green";
-        firstNameError.style.display = "none";
+      firstName.style.border = "2px solid green";
+      firstNameError.style.display = "none";
     } else {
-        firstName.style.border = "2px solid red";
-        firstNameError.style.display = "block";
+      firstName.style.border = "2px solid red";
+      firstNameError.style.display = "block";
     }
-});
+  });
 
-
-// Last Name live validation
-lastName.addEventListener("input", function () {
+  // Last Name live validation
+  lastName.addEventListener("input", function () {
     if (namePattern.test(lastName.value)) {
-        lastName.style.border = "2px solid green";
-        lastNameError.style.display = "none";
+      lastName.style.border = "2px solid green";
+      lastNameError.style.display = "none";
     } else {
-        lastName.style.border = "2px solid red";
-        lastNameError.style.display = "block";
+      lastName.style.border = "2px solid red";
+      lastNameError.style.display = "block";
     }
-});
+  });
 
-// State live validation
-state.addEventListener("select", function () {
-    if (state === "") {
-      state.style.border = "2px solid red";
+
+  // state
+
+
+    stateSelect.addEventListener("change", function () {
+    if (stateSelect.value === "") {
+      stateSelect.style.border = "2px solid red  ";
+      stateError.style.display = "block";
     } else {
-      state.style.border = "2px solid green";
+      stateSelect.style.border = "2px solid green";
+      stateError.style.display = "none";
     }
-});
-
-// document.getElementById("state").addEventListener("orderBtn", function(e){
-//   const state = document.getElementById("state").value;
-//   const stateError = document.getElementById("stateError");
-
-//   if(state === ""){
-//     e.preventDefault(); 
-//     stateError.style.display = "inline";
-//   } else {
-//     stateError.style.display = "none";
-//   }
-// });
-
-// Address live validation
-address.addEventListener("input", function () {
+  });
+  // Address live validation
+  address.addEventListener("input", function () {
     if (addressPattern.test(address.value)) {
-        address.style.border = "2px solid green";
-        addressError.style.display = "none";
+      address.style.border = "2px solid green";
+      addressError.style.display = "none";
     } else {
-        address.style.border = "2px solid red";
-        addressError.style.display = "block";
+      address.style.border = "2px solid red";
+      addressError.style.display = "block";
     }
   });
 
@@ -122,55 +115,49 @@ address.addEventListener("input", function () {
       phoneError.style.display = "block";
       isValid = false;
     } else {
-        phoneInput.style.border = "2px solid green";
-        phoneError.style.display = "none";
+      phoneInput.style.border = "2px solid green";
+      phoneError.style.display = "none";
     }
-    
+
     // First name check
     if (!namePattern.test(firstName.value)) {
-        firstName.style.border = "2px solid red";
-        firstNameError.style.display = "block";
-        isValid = false;
+      firstName.style.border = "2px solid red";
+      firstNameError.style.display = "block";
+      isValid = false;
     } else {
-        firstName.style.border = "2px solid green";
-        firstNameError.style.display = "none";
+      firstName.style.border = "2px solid green";
+      firstNameError.style.display = "none";
     }
-    
+
     // Last name check
     if (!namePattern.test(lastName.value)) {
-        lastName.style.border = "2px solid red";
-        lastNameError.style.display = "block";
-        isValid = false;
+      lastName.style.border = "2px solid red";
+      lastNameError.style.display = "block";
+      isValid = false;
     } else {
-        lastName.style.border = "2px solid green";
-        lastNameError.style.display = "none";
+      lastName.style.border = "2px solid green";
+      lastNameError.style.display = "none";
     }
 
 
 
-    // State check
+// state 
 
-    if (!state === "") {
-        state.style.border = "2px solid red";
-        stateError.style.display = "block";
-        isValid = false;
-    } else {
-        state.style.border = "2px solid green";
-        stateError.style.display = "none";
+    if (stateSelect.value === "") {
+      stateSelect.style.border = "2px solid red";
+      stateError.style.display = "block";
+      isValid = false;
     }
-
 
     // Address check
     if (!addressPattern.test(address.value)) {
-        address.style.border = "2px solid red";
-        addressError.style.display = "block";
-        isValid = false;
+      address.style.border = "2px solid red";
+      addressError.style.display = "block";
+      isValid = false;
     } else {
-        address.style.border = "2px solid green";
-        addressError.style.display = "none";
+      address.style.border = "2px solid green";
+      addressError.style.display = "none";
     }
-
-
 
     // Final validation
     if (isValid) {
