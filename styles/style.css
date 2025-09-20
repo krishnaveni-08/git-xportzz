@@ -124,7 +124,7 @@ header {
 
 footer {
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -347,12 +347,6 @@ header .navbar .top-row .navs a h2{
 }
 
 @media only screen and (max-width:927px) {
-
-
-
-}
-
-@media only screen and (max-width:927px) {
         footer {
         height: 100vh;
     }
@@ -546,7 +540,6 @@ header .navbar .logo img{
 
 }
 
-
 @media only screen and (max-width:561px) {
 header .navbar .top-row .navs{
     width: 60%;
@@ -638,6 +631,11 @@ header nav .icon {
     width: 15%;
 }
 } */
+    @media only screen and (max-width:484px) {
+        footer .contain .content .follow {
+            width: 50%;
+        }
+    }
     @media only screen and (max-width:470px) {
         .navbar {
             height: 12vh;
@@ -667,6 +665,9 @@ footer .contain .content .follow {
 }
 }
 @media only screen and (max-width:384px) {
+    footer{
+        height: 163vh;
+    }
     .search-row {
         width: 100%;
     }
@@ -676,9 +677,13 @@ footer .contain .content .follow {
     .search-row input::placeholder{
         font-size: var(--fs-22);
     }
+
+
 }
 @media only screen and (max-width:384px) {
 footer .contain .privacy a p{
     font-size: var(--fs-20);
 }
+
+
 }
