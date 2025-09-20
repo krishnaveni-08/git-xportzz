@@ -578,7 +578,7 @@ span[style*="color:red"] {
 
 @media only screen and (max-width:475px) {
     #order {
-        height: 260vh;
+        height: 240vh;
     }
     
     #order .order-container .total {
@@ -589,8 +589,14 @@ span[style*="color:red"] {
         
         font-size: 20px;
     }
+    #order .order-container .total .change .align .align-two {
+        font-size: var(--fs-20);
+        margin-top: 15px;
+
+    }
     #order .order-container .total .change .align .align-one h2 {
         font-size: var(--fs-20);
+
     }
     #order .order-container .total .change .align .align-three h2{
         font-size: var(--fs-22);
