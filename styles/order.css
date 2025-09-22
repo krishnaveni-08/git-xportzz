@@ -490,6 +490,7 @@ span[style*="color:red"] {
     #order .order-container .checkout {
         width: 90%;
         height: 50%;
+        margin-bottom: 20px;
     }
 
     #order .order-container .checkout .contact {
@@ -548,7 +549,7 @@ span[style*="color:red"] {
         width: 67%;
      }
  #order .order-container .checkout .shoping .btn #orderBtn{
-    width: 180px;
+    width: 130px;
     height: 50px;
  }
  #order .order-container .checkout .shoping .btn #orderBtn button{
@@ -576,9 +577,18 @@ span[style*="color:red"] {
  }
 }
 
+@media only screen and (max-width:516px) {
+
+    #order .order-container .total .change .align .align-one {
+        gap: 10px;
+        margin-bottom: 10px;
+
+    }
+
+}
 @media only screen and (max-width:475px) {
     #order {
-        height: 240vh;
+        height: 230vh;
     }
     
     #order .order-container .total {
@@ -673,6 +683,9 @@ span[style*="color:red"] {
 
 }
 @media only screen and (max-width:428px) {
+      #order{
+        height: auto;
+      }
     #order .order-container .total .change .align .align-one h2{
         width: 100%;
     }
@@ -707,17 +720,21 @@ span[style*="color:red"] {
  }
 }
 @media only screen and (max-width:394px) {
+     #order{
+        height: 300vh;
+     }
      #order .order-container .checkout .shoping .name {
     width: 100%;
  }
 #order .order-container .checkout .shoping .name input { 
     width: 90%;  
 }
-#order {
-    height: 290vh;
-}
+
 }
 @media only screen and (max-width:374px) {
+    #order{
+        height: auto;
+    }
 #order .order-container .total .subtotal .ttl-one h3{
     font-size: var(--fs-16);
 }
@@ -728,7 +745,7 @@ span[style*="color:red"] {
 }
 @media only screen and (max-width:364px) {
     #order{
-        height: 280vh;
+        height: auto;
     }
     #order .order-container .total .change .align .align-one h2{
         font-size: var(--fs-16);
@@ -741,6 +758,7 @@ span[style*="color:red"] {
     }
     #order .order-container .total .change .align .align-three {
         width: 100%;
+        margin-top: 10px;
     }
     #order .order-container .total .head h2{
         font-size: var(--fs-22);
@@ -748,8 +766,8 @@ span[style*="color:red"] {
 }
 @media only screen and (max-width:357px) {
     #order{
-    height: 270vh;
+    height: auto;
+    }
     /* background-color: #dc3545;/ */
 }
 
-}

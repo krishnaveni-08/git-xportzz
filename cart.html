@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/cart.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
     <link rel="shortcut icon" href="./Asset/images/Frame 1000006125.ico" type="image/x-icon">
 
 
@@ -214,7 +216,9 @@
 
         </section> -->
 
-        <section class="reviews-section">
+        <section class="reviews-section" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
             <div class="container">
                 <h2 class="title">Customer Reviews</h2>
 
@@ -267,7 +271,7 @@
                 </div>
 
                 <!-- Sample reviews -->
-                <div class="reviews-list">
+                <div class="reviews-list"  data-aos="fade-left">
                     <div class="review-card">
                         <div class="review-header">
                             <h1>Nagaraj </h1>
@@ -298,7 +302,7 @@
 
 
 
-        <section class="review-section">
+        <section class="review-section" data-aos="flip-up">
             <h2 class="review-title">Product Details</h2>
             <div class="accordion-container">
 
@@ -467,6 +471,10 @@
     </footer>
     <script src="./script/style.js"></script>
     <script src="./script/cart.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
 </body>

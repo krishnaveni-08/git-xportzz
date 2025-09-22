@@ -462,6 +462,8 @@ footer .contain .privacy {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 20px;
+    /* background-color: #FF6B00; */
     
   }
 
@@ -549,7 +551,7 @@ header .navbar .top-row .navs{
 }
 @media only screen and (max-width:536px) {
 footer {
-    height: 180vh;
+    height: 170vh;
 }
 footer .contain .logo {
     height: 10%;
