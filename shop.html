@@ -16,33 +16,41 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="top-row">
-        <!-- Logo -->
-        <div class="logo">
-          <img src="./Asset/images/logo.png" alt="logo">
-        </div>
+<header>
+  <nav class="navbar">
+    <div class="top-row">
 
-        <input type="checkbox" id="check">
-
-        <ul class="nav-links">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./shop.html" class="active">Shop</a></li>
-          <li><a href="./cart.html">Cart</a></li>
-          <li><a href="./order.html">Order</a></li>
-        </ul>
-
-        <div class="icons">
-          <!-- <i class="bi bi-cart"></i>
-          <i class="bi bi-person-circle"></i> -->
-          <label for="check" class="menu_btn"><i class="bi bi-list"></i></label>
-        </div>
+      <!-- Logo -->
+      <div class="logo">
+        <img src="./Asset/images/logo.png" alt="logo">
       </div>
 
+      <!-- Hidden checkbox for hamburger -->
+      <input type="checkbox" id="nav-check">
 
-    </nav>
-  </header>
+      <!-- Nav links -->
+      <ul class="nav-links">
+        <li><a href="./index.html" >Home</a></li>
+        <li><a href="./shop.html" class="active">Shop</a></li>
+        <li><a href="./cart.html">Cart</a></li>
+        <li><a href="./order.html">Order</a></li>
+      </ul>
+
+      <!-- Right side icons + hamburger -->
+      <div class="right-icons">
+        <a href="#" class="icon-link"><i class="bi bi-heart"></i></a>
+        <a href="#" class="icon-link"><i class="bi bi-cart"></i></a>
+        <a href="#" class="icon-link"><i class="bi bi-person-circle"></i></a>
+
+        <!-- Hamburger -->
+        <label for="nav-check" class="menu-btn">
+          <i class="bi bi-list"></i>
+        </label>
+      </div>
+
+    </div>
+  </nav>
+</header>
 
 
   <!-- Navigation Tabs -->

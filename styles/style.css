@@ -45,79 +45,117 @@
 body {
   font-family: sans-serif;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-header {
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .navbar {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid #eee;
 }
 
 .top-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
-  position: relative;
+  justify-content: space-between;
 }
 
+/* Logo */
 .logo img {
-  height: 50px;
+  height: 32px;
 }
 
+/* Hide checkbox */
+#nav-check {
+  display: none;
+}
+
+/* Nav links (desktop) */
 .nav-links {
-  display: flex;
   list-style: none;
-  gap: 25px;
+  display: flex;
+  gap: 2rem;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #333;
-  font-weight: 600;
-  transition: color 0.3s;
-  font-size: var(--fs-24);
+  font-weight: 500;
 }
 
-.nav-links li a.active,
-.nav-links li a:hover {
-  color: #FF6B00;
+.nav-links li a.active {
+  color: #ff7a1a;
 }
 
-.icons {
+/* Right side icons */
+.right-icons {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 2rem;
 }
 
-.icons i {
-  font-size: 22px;
+.icon-link {
+  color: #333;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+/* Hamburger default (desktop: hide) */
+.menu-btn {
+  display: none;
+  color: #333;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
-/* Menu Button */
-.menu_btn {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  margin-left: 15px;
-}
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .top-row {
+    padding: 0.6rem 0.8rem;
+  }
 
-#check {
-  display: none;
-}
+  /* Nav links hidden by default, shown under bar */
+  .nav-links {
+    position: absolute;
+    top: 56px;             /* below the top-row */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #eee;
+    display: none;
+    padding: 0.75rem 1.25rem 1rem;
+    gap: 0.75rem;
+  }
 
-#searchBox {
-  width: 100%;
-  padding: 8px 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  .nav-links li a {
+    display: block;
+  }
+
+  /* When checkbox is checked, show menu */
+  #nav-check:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* Keep logo left, icons + hamburger right */
+  .right-icons {
+    gap: 0.6rem;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* footer st */
@@ -302,49 +340,6 @@ footer .contain .content .menu ul li a{
 
 
 
-/* media query */
-
-@media only screen and (max-width:1330px) {
-    header nav .search .content {
-        font-size: 18px;
-    }
-
-}
-
-@media only screen and (max-width:1240px) {
-    /* header nav .navs {
-        width: 40%;
-
-    } */
-
-}
-
-@media only screen and (max-width:1112px) {
-    footer .contain .content .links {
-        width: 30%;
-    }
-
-
-}
-
-@media only screen and (max-width:985px) {
-header .navbar .logo {
-    width: 15%;
-    height: 10%;
-}
-header .navbar .logo img{
-    width: 70%;
-    height: 40%;
-    object-fit: contain;
-}
-.icons i{
-    font-size: var(--fs-28);
-}
-header .navbar .top-row .navs a h2{
-    font-size: var(--fs-24);
-
-}
-}
 
 @media only screen and (max-width:927px) {
         footer {
@@ -410,12 +405,8 @@ footer .contain .privacy {
 }
 
 
-@media only screen and (max-width:842px) {
-    header .navbar .top-row .navs a h2{
-    font-size: var(--fs-22);
 
-}
-}
+
 
 @media only screen and (max-width:769px) {
   .search-row {
@@ -639,19 +630,7 @@ header nav .icon {
         }
     }
     @media only screen and (max-width:470px) {
-        .navbar {
-            height: 12vh;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        /* .search-row{
-            height: 50px;
-        } */
-        .search-row input {
-            height: 100%;
-            
-        }
+   
         header .navbar .logo {
             width: 20%;
             height: 50px;
@@ -683,9 +662,19 @@ footer .contain .content .follow {
 
 }
 @media only screen and (max-width:384px) {
-footer .contain .privacy a p{
-    font-size: var(--fs-20);
+    footer .contain .privacy a p{
+        font-size: var(--fs-20);
+    }
+    
+    
 }
-
-
+@media only screen and (max-width:384px) {
+        header .navbar .logo {
+            width: 25%;
+            height: 50px;
+}
+header .navbar .logo img{
+    width: 100%;
+    height: 100%;
+}
 }

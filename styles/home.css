@@ -347,12 +347,12 @@
   flex: 0 0 auto;
   width: 180px;
   text-align: center;
-  background: white;
-  /* border-radius: 10px; */
-  box-shadow: 10px 20px 20px  rgba(0, 0, 0, 0.1);
-  padding: 15px;
-
+  background: #ffffff;
+  border-radius: 12px;                /* smooth corner rectangle */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* 4 side light border */
+  padding: 18px 16px;
 }
+
 
 .wrap :hover {
   filter: brightness(1);
