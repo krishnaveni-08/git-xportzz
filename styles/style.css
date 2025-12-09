@@ -293,7 +293,7 @@ footer .contain .content .menu ul {
 footer .contain .content .menu ul li a{
     width: 100%;
     height: 100%;
-    text-decoration: none;
+    text-decoration: none;  
     list-style: none;
     color: white;
     font-size: var(--fs-18);

@@ -243,7 +243,7 @@ body{
   -webkit-background-clip: text;
 }
 #shop-container .sp-container .card .content .icons:hover{
-  background: linear-gradient(45deg, #ff6a00, #ee0979, #7b2ff7);
+  background-color: #FF6B00; 
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -274,7 +274,7 @@ body{
 
 /* latest st */
 #Latest {
-  background: linear-gradient(90deg, #f96b4f, #f9a42e);
+  background-color: #FF6B00; 
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -311,7 +311,7 @@ body{
   padding: 12px 25px;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(90deg, #ff512f, #f09819);
+  background-color:  white; 
   color: black;
   font-size: 1rem;
   font-weight: bold;
