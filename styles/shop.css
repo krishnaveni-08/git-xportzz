@@ -271,7 +271,6 @@ body{
 }
 
 /*  shop con end */
-
 /* latest st */
 #Latest {
   background-color: #FF6B00; 
@@ -295,28 +294,35 @@ body{
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
+  /* Remove fixed height */
+  height: auto;
+  align-items: center; /* vertically center items */
 }
 
 #Latest .email input {
-  padding: 12px 15px;
+  padding: 10px 15px; /* reduced padding for smaller height */
   border: none;
   border-radius: 30px;
   outline: none;
   width: 280px;
   max-width: 100%;
   font-size: 1rem;
+  height: 40px; /* set fixed smaller height */
+  box-sizing: border-box;
 }
 
 #Latest .email button {
-  padding: 12px 25px;
+  padding: 10px 25px;  /* adjusted padding */
   border: none;
   border-radius: 30px;
-  background-color:  white; 
+  background-color: white; 
   color: black;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
+  height: 40px; /* match input height */
+  box-sizing: border-box;
 }
 
 #Latest .email button:hover {
@@ -324,7 +330,24 @@ body{
   color: white;
 }
 
-/* latest end */
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #Latest .content h2 {
+    font-size: 1.5rem;
+  }
+  
+  #Latest .email input,
+  #Latest .email button {
+    width: 100%;
+    max-width: none;
+    height: 45px; /* slightly taller on smaller devices for easier tap */
+  }
+  
+  #Latest .email {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 
 
 /* media query */
@@ -594,17 +617,7 @@ h1.mobile-toggle {
 }
 }
 @media only screen and (max-width:384px) {
-   #Latest {
-    height: 70vh;
-   }
-    #Latest .stay{
-      width: 100%;
-      height: 80%;
-    }
-  #Latest .stay .content .email input {
-    width: 250px;
-    height: 60px;
-  }
+
   /* #shop-container .sp-container {
     width: 100%;
   } */
@@ -615,14 +628,4 @@ h1.mobile-toggle {
   width: 100%;
 }
 }
-@media only screen and (max-width:343px) {
-  
-  #Latest .stay .content .email input {
-    width: 225px;
-    height: 60px;
-  }
-  #Latest .stay .content .email input::placeholder {
-    font-size: 16px;
 
-  }
-}

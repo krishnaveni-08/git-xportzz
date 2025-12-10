@@ -305,9 +305,9 @@ span[style*="color:red"] {
 }
 
 #order .order-container .total .change-con hr {
-    width: 660px;
+    width: 715px;
     height: 1px;
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: black;
 }
 
@@ -328,7 +328,7 @@ span[style*="color:red"] {
 }
 
 #order .order-container .total .subtotal hr {
-    width: 660px;
+    width: 715px;
     height: 1px;
     background-color: black;
 }
